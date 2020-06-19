@@ -123,3 +123,19 @@ const totalYears = companies.reduce(
   0
 );
 console.log(totalYears);
+
+/******* USING COMBINED ALL FUNCTIONS ********/
+
+// 1. lets age all by 2 times
+// 2. age greater or equal to 40
+// 3. sort age asc
+// 4. now add all ages using reduce
+
+const combined = ages
+    .map((age) => age * 2)
+    .filter( age => age>=40)
+    .sort ( (age1,age2) => age1 - age2 )
+    .reduce ( (total,age) => total + age, 0 )
+
+console.log(combined);
+
